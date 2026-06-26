@@ -4,6 +4,7 @@ require:
   - ../lib/rubocop/cop/captive/translation/rails_i18n_presence.rb
   - ../lib/rubocop/cop/captive/translation/kaminari_i18n_presence.rb
   - ../lib/rubocop/cop/captive/rspec/specify_before_parameter.rb
+  - ../lib/rubocop/cop/captive/rspec/no_db_in_unit_specs.rb
   - ../lib/rubocop/cop/captive/rails/after_commit_not_allowed.rb
   - ../lib/rubocop/cop/captive/rails/force_ssl_enabled_in_production.rb
   - ../lib/rubocop/cop/captive/rails/migration_methods.rb
@@ -42,6 +43,21 @@ Captive/RSpec/SpecifyBeforeParameter:
   Description: 'Specify the parameter in `before` blocks. Example : before(:each) or before(:all)'
   Include:
     - 'spec/**/*'
+
+Captive/RSpec/NoDbInUnitSpecs:
+  Description: 'Do not hit the database in unit tests. Use `instance_double` or `Model.new` instead. If testing a scope, move to spec/integration.'
+  Enabled: true
+  Include:
+    - 'spec/**/*'
+  AllowedPaths:
+    - 'spec/requests'
+    - 'spec/system'
+    - 'spec/features'
+    - 'spec/integration'
+    - 'spec/factories'
+    - 'spec/services'
+    - 'spec/jobs'
+    - 'spec/support'
 
 # Rails
 Captive/Rails/AfterCommitNotAllowed:
