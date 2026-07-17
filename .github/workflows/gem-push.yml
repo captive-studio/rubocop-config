@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 4.0.5
+        ruby-version: 4.0.6
         bundler-cache: true
     - uses: softprops/action-gh-release@3d0d9888cb7fd7b750713d6e236d1fcb99157228 # v3
       with:
