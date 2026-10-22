@@ -13,5 +13,5 @@ group :development do
 end
 
 group :test do
-  gem "pry", "0.16.0"
+  gem "pry", "0.16.1"
 end
