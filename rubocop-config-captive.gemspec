@@ -28,7 +28,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency("rubocop-rake", "~> 0.7")
   gem.add_dependency("rubocop-rails", "~> 2.32")
   gem.add_dependency("rubocop-rspec", "~> 3.6")
-  gem.add_dependency("rubocop-capybara", "~> 2.22")
+  gem.add_dependency("rubocop-capybara", "~> 3.0")
   gem.add_dependency("rubocop-factory_bot", "~> 2.27")
   gem.add_dependency("rubocop-magic_numbers", "~> 0.5")
   gem.add_dependency("rubocop-rails-omakase", "~> 1.1")
